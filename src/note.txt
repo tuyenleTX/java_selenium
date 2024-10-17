@@ -1,0 +1,2 @@
+List<Integer> myList = new ArrayList<>(); //used if wanting to change elements in an array.
+List<Integer> myList = Arrays.asList(1,2,3); //used if not wanting to update elements in an array.

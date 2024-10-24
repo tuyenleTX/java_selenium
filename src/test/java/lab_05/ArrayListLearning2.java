@@ -14,7 +14,7 @@ public class ArrayListLearning2 {
         myList.add(4);
         myList.add(4);
         System.out.println("Initial list: " + myList);
-        //Question: get 3 smallest numbers but not duplicated in the list
+        //Question: remove duplicated in the list
 
         //Case 1: remove duplicated numbers then use Collections.sort() method
         /*List<Integer> newList = new ArrayList<>();
@@ -31,12 +31,17 @@ public class ArrayListLearning2 {
         Set<Integer> newSortedList = new HashSet<>(myList);
         System.out.println("New sorted list not including duplicated numbers:" + newSortedList);
 
-        //Convert Set to List then get the first 3 smallest numbers
+        //Question 4: Convert Set to List then get the first 3 smallest numbers
         List<Integer> convertedList = new ArrayList<>(newSortedList);
+        //case 1:
         List<Integer> arrOf3 = new ArrayList<>();
         for(int i = 0; i < 3; i ++) {
             arrOf3.add(convertedList.get(i));
         }
         System.out.println("3 smallest numbers: " + arrOf3);
+        //case 2:
+        List<Integer> newArrOf3 = convertedList.subList(0,3);
+        System.out.println(newArrOf3);
+
     }
 }

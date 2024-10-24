@@ -1,3 +1,5 @@
 List<Integer> myList = new ArrayList<>(); //used if wanting to change elements in an array.
+myList.add(1);
 List<Integer> myList = Arrays.asList(1,2,3); //used if not wanting to update elements in an array.
 myList.remove(new Integer(4))//remove value instead of index
+Set<Integer> newSortedList = new HashSet<>(myList);//use Set - it will remove duplicated numbers and sort the list

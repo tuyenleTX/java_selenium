@@ -1,5 +1,7 @@
 package lab_05;
 
+import java.util.Arrays;
+
 public class StringLearning {
     public static void main(String[] args) {
         String name1 = "Teo";
@@ -21,5 +23,17 @@ public class StringLearning {
             System.out.println("Valid Password");
         else
             System.out.println("Invalid Password");
+
+        //String is immutable
+        String url = "https://google.com";
+        System.out.println("index of: google is: " + url.indexOf("google"));
+        String[] arrStrings = url.split("://");
+        System.out.println(url.contains("https"));
+        System.out.println(url.substring(8));
+        System.out.println("after splitting: " + Arrays.toString(arrStrings));
+        System.out.println("after replacing: " + url.replace("o", "O"));
+        String cooking = "105 mins";
+        System.out.println("After trimming: " + cooking.trim());
+        System.out.println("After using regular expression: " + cooking.replaceAll("[^0-9]", ""));
     }
 }

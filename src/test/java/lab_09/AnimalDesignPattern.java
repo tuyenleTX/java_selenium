@@ -12,6 +12,7 @@ public class AnimalDesignPattern {
     public static void main(String[] args) {
         Builder builder = new  Builder();
 
+        //method chaining
         Animal horse = builder.setName("Horse").setSpeed(new SecureRandom().nextInt(75)).setWithWings(false).build();
         Animal tiger = builder.setName("Tiger").setSpeed(new SecureRandom().nextInt(100)).setWithWings(false).build();
         Animal falcon = builder.setName("Falcon").setSpeed(new SecureRandom().nextInt(120)).setWithWings(true).build();

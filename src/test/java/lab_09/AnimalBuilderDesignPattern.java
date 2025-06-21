@@ -1,20 +1,20 @@
 package lab_09;
 
-import java.security.SecureRandom;
-
 /*
 Racing animal with builder design pattern
 Eagle, Falcon, Tiger, Dog, Horse, etc.
 Animal tiger = new Animal.Builder().withWings(false)...build();
 Animal falcon = new Animal.Builder().withWings(true)...build();
  */
-public class Animal {
+
+//Builder design pattern is used in purpose of immutable object (cannot change object)
+public class AnimalBuilderDesignPattern {
 
     private int speed;
     private String name;
     private boolean withWings;
 
-    protected Animal(Builder builder) {
+    protected AnimalBuilderDesignPattern(Builder builder) {
         this.name = builder.name;
         this.speed = builder.speed;
         this.withWings = builder.withWings;
@@ -63,8 +63,8 @@ public class Animal {
             return this;
         }
 
-        public Animal build(){
-            return new Animal(this);
+        public AnimalBuilderDesignPattern build(){
+            return new AnimalBuilderDesignPattern(this);
         }
     }
 }

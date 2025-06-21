@@ -4,28 +4,28 @@ import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 
-import static lab_09.Animal.Builder;
+import static lab_09.AnimalBuilderDesignPattern.Builder;
 
-public class AnimalDesignPattern {
+public class AnimalTest {
 
 
     public static void main(String[] args) {
         Builder builder = new  Builder();
 
         //method chaining
-        Animal horse = builder.setName("Horse").setSpeed(new SecureRandom().nextInt(75)).setWithWings(false).build();
-        Animal tiger = builder.setName("Tiger").setSpeed(new SecureRandom().nextInt(100)).setWithWings(false).build();
-        Animal falcon = builder.setName("Falcon").setSpeed(new SecureRandom().nextInt(120)).setWithWings(true).build();
-        Animal eagle = builder.setName("Eagle").setSpeed(new SecureRandom().nextInt(150)).setWithWings(true).build();
-        Animal dog = builder.setName("Dog").setSpeed(new SecureRandom().nextInt(60)).setWithWings(false).build();
+        AnimalBuilderDesignPattern horse = builder.setName("Horse").setSpeed(new SecureRandom().nextInt(75)).setWithWings(false).build();
+        AnimalBuilderDesignPattern tiger = builder.setName("Tiger").setSpeed(new SecureRandom().nextInt(100)).setWithWings(false).build();
+        AnimalBuilderDesignPattern falcon = builder.setName("Falcon").setSpeed(new SecureRandom().nextInt(120)).setWithWings(true).build();
+        AnimalBuilderDesignPattern eagle = builder.setName("Eagle").setSpeed(new SecureRandom().nextInt(150)).setWithWings(true).build();
+        AnimalBuilderDesignPattern dog = builder.setName("Dog").setSpeed(new SecureRandom().nextInt(60)).setWithWings(false).build();
 
-        List<Animal> animalList = new ArrayList<>();
+        List<AnimalBuilderDesignPattern> animalList = new ArrayList<>();
         animalList.add(tiger);
         animalList.add(horse);
         animalList.add(falcon);
         animalList.add(eagle);
         animalList.add(dog);
-        Animal winner = animalList.get(0);
+        AnimalBuilderDesignPattern winner = animalList.get(0);
         System.out.println(winner.getName());
         System.out.println(winner.getSpeed());
         for(int i = 1; i < animalList.size(); i++){
